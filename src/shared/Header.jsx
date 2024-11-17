@@ -569,10 +569,11 @@ const Header = () => {
                       <li className="menu-item">
                         <a href="#">
                           <svg
+                            className="icon-laptop"
                             width={29}
                             height={24}
                             viewBox="0 0 29 24"
-                            fill="none"
+                            fill=""
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
@@ -586,10 +587,11 @@ const Header = () => {
                       <li className="menu-item">
                         <a href="#">
                           <svg
+                            className="icon-laptop"
                             width={29}
                             height={24}
                             viewBox="0 0 29 24"
-                            fill="none"
+                            fill=""
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
@@ -603,10 +605,11 @@ const Header = () => {
                       <li className="menu-item">
                         <a href="#">
                           <svg
+                            className="icon-laptop"
                             width={30}
                             height={24}
                             viewBox="0 0 30 24"
-                            fill="none"
+                            fill=""
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path

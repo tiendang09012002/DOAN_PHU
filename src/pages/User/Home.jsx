@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import convertVND from "../../shared/convert/convertVND";
 const Home = () => {
   const [productsFeatured, setProductsFeatured] = useState([]);
-  
+
   const initProductsFeatured = [
     {
       id: 1,
@@ -48,11 +48,14 @@ const Home = () => {
 
   useEffect(() => {
     const storedProducts = localStorage.getItem("productsFeatured");
-    if (storedProducts == null) {
-      setProductsFeatured(JSON.parse(storedProducts));
-    } else {
-      localStorage.setItem("productsFeatured", JSON.stringify(initProductsFeatured));
+    if (!storedProducts) {
+      localStorage.setItem(
+        "productsFeatured",
+        JSON.stringify(initProductsFeatured)
+      );
       setProductsFeatured(initProductsFeatured);
+    } else {
+      setProductsFeatured(JSON.parse(storedProducts));
     }
   }, []);
 
@@ -81,7 +84,6 @@ const Home = () => {
                         />
                         <li data-target="#slide" data-slide-to={1} />
                         <li data-target="#slide" data-slide-to={2} />
-                        <li data-target="#slide" data-slide-to={3} />
                       </ul>
                       {/* The slideshow */}
                       <div className="carousel-inner">
@@ -92,13 +94,16 @@ const Home = () => {
                           />
                         </div>
                         <div className="carousel-item">
-                          <img src="https://placehold.co/852x462" alt="slide" />
+                          <img
+                            src="../../../public/images/slider2.png"
+                            alt="slide"
+                          />
                         </div>
                         <div className="carousel-item">
-                          <img src="https://placehold.co/852x462" alt="slide" />
-                        </div>
-                        <div className="carousel-item">
-                          <img src="https://placehold.co/852x462" alt="slide" />
+                          <img
+                            src="../../../public/images/slider3.png"
+                            alt="slide"
+                          />
                         </div>
                       </div>
                       {/* Left and right controls */}
@@ -184,39 +189,43 @@ const Home = () => {
               </a>
             </div>
             <div id="frame-47">
-              {productsFeatured?.map((product) => {              
+              {productsFeatured?.map((product, index) => {
                 return (
-                  <div className="laptop-item">
+                  <div key={index} className="laptop-item">
                     <a href="./detail-product.html">
                       <img
                         className="image-laptop"
-                        src={`../../../public/images/`+ product.image}
+                        src={`../../../public/images/` + product.image}
                         alt
                       />
                     </a>
                     <div className="info-laptop">
-                      <p className="name-laptop">
-                        {product.name}
-                      </p>
+                      <p className="name-laptop">{product.name}</p>
                       <div className="config-laptop">
                         <div className="config-laptop-1">
-                          {
-                            product.configs.map((config) =>{     
-                              return(
-                                <span className="cpu-laptop info-detail">
+                          {product.configs.map((config, index) => {
+                            return (
+                              <span
+                                key={index}
+                                className="cpu-laptop info-detail"
+                              >
                                 {config}
-                                </span>
-                              )                         
-                            })
-                          }
+                              </span>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>
                     <div className="price-item">
                       <div className="price">
-                        <span className="price-original">{convertVND(product.price)}</span>
-                        <p className="price-reduced">{
-                        convertVND(product.price - product.price*product.sale/100)}</p>
+                        <span className="price-original">
+                          {convertVND(product.price)}
+                        </span>
+                        <p className="price-reduced">
+                          {convertVND(
+                            product.price - (product.price * product.sale) / 100
+                          )}
+                        </p>
                       </div>
                       <div className="item-action">
                         <button className="btn-add">

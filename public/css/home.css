@@ -192,13 +192,19 @@ span {
   list-style: none;
   padding: 10px;
 }
+.menu-item:hover {
+  background: #e82f35;
+  cursor: pointer;
+}
+.menu-item:hover a {
+  color: #ffffff;
+}
+.menu-item:hover .icon-laptop {
+  fill: #fff;
+}
 .menu-item a {
   color: #000000;
   text-decoration: none;
-}
-.menu-item:hover {
-  background: #ffffff;
-  cursor: pointer;
 }
 
 #infomation {
@@ -231,7 +237,6 @@ span {
   justify-content: space-between;
 }
 #nav-menu a {
-  color: #000;
   /* Body 3 Desktop */
   font-family: Inter;
   font-size: 20px;
@@ -239,6 +244,7 @@ span {
   font-weight: 500;
   line-height: 120%; /* 24px */
 }
+
 #frame-24 {
   display: flex;
   width: 852px;
@@ -694,6 +700,16 @@ span {
   font-weight: 600;
   line-height: normal;
 }
+.btn-add:hover {
+  background: rgba(232, 47, 53, 0.5);
+}
+.btn-add:active {
+  background: none;
+  color: #E82F35;
+}
+.btn-add:active svg{
+  background: #E82F35;
+}
 .btn-compare {
   display: flex;
   padding: 6px 63px;
@@ -711,6 +727,11 @@ span {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+.btn-compare:hover {
+  border-radius: 3px;
+  border: 0.5px solid #fff;
+  background: rgba(232, 47, 53, 0.5);
 }
 .product-i3 {
   display: inline-flex;
