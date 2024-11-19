@@ -79,12 +79,19 @@ span {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+.title-config {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 .form-auth .social-login {
   color: #fff;
@@ -592,6 +599,18 @@ span {
   border: 1px solid #d2d2d2;
   background: #fff;
 }
+.laptop-item:hover {
+  border-radius: 6px;
+  border: 1px solid #e82f35;
+  background: #fff;
+  box-shadow: 0px 4px 14px 0px rgba(97, 97, 97, 0.4);
+}
+.laptop-item-2:hover {
+  border-radius: 6px;
+  border: 1px solid #e82f35;
+  background: #fff;
+  box-shadow: 0px 4px 14px 0px rgba(97, 97, 97, 0.4);
+}
 .image-laptop {
   width: 228px;
   height: 157.331px;
@@ -606,8 +625,6 @@ span {
 .name-laptop {
   display: flex;
   padding: 6px;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   align-self: stretch;
   font-size: 20px;
@@ -705,10 +722,10 @@ span {
 }
 .btn-add:active {
   background: none;
-  color: #E82F35;
+  color: #e82f35;
 }
-.btn-add:active svg{
-  background: #E82F35;
+.btn-add:active svg {
+  background: #e82f35;
 }
 .btn-compare {
   display: flex;
@@ -732,6 +749,9 @@ span {
   border-radius: 3px;
   border: 0.5px solid #fff;
   background: rgba(232, 47, 53, 0.5);
+}
+.btn-compare:active {
+  background: #fff;
 }
 .product-i3 {
   display: inline-flex;
@@ -880,6 +900,14 @@ span {
   font-weight: 700;
   line-height: 143%; /* 20.02px */
 }
+#status-product .status span {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 143%;
+}
 #option-product {
   display: flex;
   align-items: center;
@@ -890,6 +918,10 @@ span {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+#option-product .option:hover {
+  border-radius: 6px;
+  border: 1px solid #e82f35;
 }
 .frame-145 {
   display: flex;
@@ -1387,6 +1419,9 @@ td {
   gap: 12px;
   margin-top: -70px;
 }
+.home-cart .item-cart .info-laptop .config-laptop {
+  width: 250px;
+}
 .home-cart .item-cart .price-item {
   margin-top: -30px;
 }
@@ -1395,6 +1430,10 @@ td {
 }
 .home-cart .item-cart .price-item #quantity-input {
   text-align: center;
+  border: 1px solid #000;
+}
+.home-cart .item-cart .price-item .quantity-button {
+  border: 1px solid #000;
 }
 .home-cart .item-cart .delete-item {
   display: flex;

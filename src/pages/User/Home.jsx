@@ -2,7 +2,23 @@ import { useState, useEffect } from "react";
 import convertVND from "../../shared/convert/convertVND";
 const Home = () => {
   const [productsFeatured, setProductsFeatured] = useState([]);
-
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+  const handleAddToCart = (product) => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingProductIndex = cart.findIndex(
+      (item) => item.id === product.id
+    );
+    if (existingProductIndex !== -1) {
+      cart[existingProductIndex].quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product.name} đã được thêm vào giỏ hàng!`);
+  };
   const initProductsFeatured = [
     {
       id: 1,
@@ -125,27 +141,27 @@ const Home = () => {
                     <div id="menu-brand">
                       <ul>
                         <li className="brand-item">
-                          <a href="#">
+                          <a href="/category-brand">
                             <img src="../../../public/images/image 5.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="#">
+                          <a href="/category-brand">
                             <img src="../../../public/images/image 6.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="#">
+                          <a href="/category-brand">
                             <img src="../../../public/images/image 7.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="#">
+                          <a href="/category-brand">
                             <img src="../../../public/images/image 8.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="#">
+                          <a href="/category-brand">
                             <img src="../../../public/images/image 9.png" alt />
                           </a>
                         </li>
@@ -192,7 +208,7 @@ const Home = () => {
               {productsFeatured?.map((product, index) => {
                 return (
                   <div key={index} className="laptop-item">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src={`../../../public/images/` + product.image}
@@ -228,7 +244,10 @@ const Home = () => {
                         </p>
                       </div>
                       <div className="item-action">
-                        <button className="btn-add">
+                        <button
+                          className="btn-add"
+                          onClick={() => handleAddToCart(product)}
+                        >
                           <svg
                             width={20}
                             height={19}
@@ -297,7 +316,7 @@ const Home = () => {
                 <img src="./images/Rectangle 11.png" alt />
                 <div className="frame-51">
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -390,7 +409,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -483,7 +502,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -604,7 +623,7 @@ const Home = () => {
                 </svg>
                 <div className="frame-52">
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -697,7 +716,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -790,7 +809,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -889,7 +908,7 @@ const Home = () => {
                 <img src="./images/Rectangle 13.png" alt />
                 <div className="frame-53">
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -982,7 +1001,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"
@@ -1075,7 +1094,7 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="laptop-item-2">
-                    <a href="./detail-product.html">
+                    <a href="/product-detail">
                       <img
                         className="image-laptop"
                         src="./images/image 3.png"

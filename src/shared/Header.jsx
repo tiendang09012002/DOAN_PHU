@@ -407,7 +407,7 @@ const Header = () => {
             <div className="header-container">
               <div className="header-logo-search">
                 <div className="header-logo row">
-                  <a href="#">
+                  <a href="/">
                     <svg
                       width={149}
                       height={44}
@@ -514,7 +514,7 @@ const Header = () => {
                   </svg>
                   Đăng nhập
                 </button>
-                <a href="#" className="header-action">
+                <a href="/cart" className="header-action">
                   <svg
                     width={30}
                     height={24}
@@ -529,7 +529,7 @@ const Header = () => {
                   </svg>
                   Giỏ hàng
                 </a>
-                <a href="#" className="header-action">
+                <a href="https://maps.app.goo.gl/Fe8jzp8QCuJn1dPQ9" className="header-action">
                   <svg
                     width={25}
                     height={30}
@@ -567,7 +567,7 @@ const Header = () => {
                   <div id="menu">
                     <ul>
                       <li className="menu-item">
-                        <a href="#">
+                        <a href="/list-product">
                           <svg
                             className="icon-laptop"
                             width={29}
@@ -585,7 +585,7 @@ const Header = () => {
                         </a>
                       </li>
                       <li className="menu-item">
-                        <a href="#">
+                        <a href="/list-product">
                           <svg
                             className="icon-laptop"
                             width={29}
@@ -603,7 +603,7 @@ const Header = () => {
                         </a>
                       </li>
                       <li className="menu-item">
-                        <a href="#">
+                        <a href="/list-product">
                           <svg
                             className="icon-laptop"
                             width={30}
@@ -625,10 +625,10 @@ const Header = () => {
                   <div id="infomation">
                     <ul>
                       <li className="info-item">
-                        <a href="./contact.html">Liên hệ</a>
+                        <a href="/contact">Liên hệ</a>
                       </li>
                       <li className="info-item">
-                        <a href="#">Giới thiệu</a>
+                        <a href="/introduce">Giới thiệu</a>
                       </li>
                     </ul>
                   </div>
