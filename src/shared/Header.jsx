@@ -1,405 +1,38 @@
+import Compare from "./modal/modalCompare";
+import ForgotPassword from "./modal/modalForgotPassword";
+import Login from "./modal/modalLogin";
+import Register from "./modal/modalRegister";
+import User from "./modal/modalUser";
+import { useState, useEffect } from "react";
 const Header = () => {
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(localStorage.getItem("currentUser")) || null
+  );
+
+  // Hàm tạo user mặc định nếu chưa tồn tại
+  const initializeDefaultUser = () => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const defaultUser = { username: "admin", password: "admin" };
+
+    // Kiểm tra nếu user mặc định chưa có thì thêm vào
+    if (!users.some((user) => user.username === "admin")) {
+      users.push(defaultUser);
+      localStorage.setItem("users", JSON.stringify(users));
+    }
+  };
+
+  // Chạy khi ứng dụng được khởi tạo
+  useEffect(() => {
+    initializeDefaultUser();
+  }, []);
   return (
     <>
       <div>
-        {/* Button trigger modal */}
-        {/* Modal */}
-        <div
-          className="modal fade"
-          id="loginModal"
-          tabIndex={-1}
-          aria-labelledby="loginModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered modal-lg">
-            <div className="modal-content">
-              <div className="form-auth" id="form-login">
-                <h2>Đăng nhập</h2>
-                <div className="input-group">
-                  <input type="text" placeholder="Nhập số điện thoại" />
-                </div>
-                <div className="input-group" id="input-password">
-                  <input
-                    type="password"
-                    placeholder="Nhập mật khẩu"
-                    id="password"
-                  />
-                  <i className="fas fa-eye toggle-password" />
-                </div>
-                <div className="options">
-                  <a
-                    href="#"
-                    id="link-forgot-password"
-                    data-toggle="modal"
-                    data-target="#forgotPasswordModal"
-                  >
-                    Quên mật khẩu
-                  </a>
-                  <span>|</span>
-                  <a
-                    href="#"
-                    id="link-register"
-                    data-toggle="modal"
-                    data-target="#registerModal"
-                  >
-                    Không có tài khoản
-                  </a>
-                </div>
-                <div className="social-login">
-                  hoặc
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={26}
-                      height={26}
-                      viewBox="0 0 26 26"
-                      fill="none"
-                    >
-                      <path
-                        d="M5.76215 15.7121L4.85712 19.0907L1.54929 19.1607C0.560727 17.3271 0 15.2293 0 13C0 10.8443 0.524266 8.81142 1.45356 7.02144L4.39918 7.56134L5.68923 10.4886C5.41922 11.2757 5.27206 12.1207 5.27206 13C5.27216 13.9543 5.44502 14.8686 5.76215 15.7121Z"
-                        fill="#FBBB00"
-                      />
-                      <path
-                        d="M25.7729 10.5714C25.9222 11.3578 26 12.1699 26 13C26 13.9307 25.9021 14.8385 25.7157 15.7143C25.0829 18.6943 23.4293 21.2964 21.1386 23.1378L21.1379 23.1371L17.4286 22.9479L16.9037 19.6707C18.4236 18.7793 19.6115 17.3843 20.2372 15.7143H13.2858V10.5714H25.7729Z"
-                        fill="#518EF8"
-                      />
-                      <path
-                        d="M21.1379 23.1371L21.1386 23.1378C18.9108 24.9285 16.0807 26 13 26C8.04929 26 3.74502 23.2328 1.54929 19.1607L5.76215 15.7121C6.85999 18.6421 9.68643 20.7279 13 20.7279C14.4243 20.7279 15.7587 20.3428 16.9037 19.6707L21.1379 23.1371Z"
-                        fill="#28B446"
-                      />
-                      <path
-                        d="M21.2979 2.99284L17.0864 6.44069C15.9014 5.69999 14.5007 5.27211 13 5.27211C9.61143 5.27211 6.73207 7.45353 5.68923 10.4886L1.45356 7.02144C3.61715 2.85001 7.97571 0 13 0C16.1543 0 19.0464 1.12359 21.2979 2.99284Z"
-                        fill="#F14336"
-                      />
-                    </svg>
-                  </a>
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={26}
-                      height={26}
-                      viewBox="0 0 26 26"
-                      fill="none"
-                    >
-                      <path
-                        d="M26 13C26 19.4888 21.2459 24.8671 15.0312 25.8421V16.7578H18.0604L18.6367 13H15.0312V10.5615C15.0312 9.53316 15.535 8.53125 17.1498 8.53125H18.7891V5.33203C18.7891 5.33203 17.3012 5.07812 15.8788 5.07812C12.9096 5.07812 10.9688 6.87781 10.9688 10.1359V13H7.66797V16.7578H10.9688V25.8421C4.75414 24.8671 0 19.4888 0 13C0 5.82055 5.82055 0 13 0C20.1795 0 26 5.82055 26 13Z"
-                        fill="#1877F2"
-                      />
-                      <path
-                        d="M18.0604 16.7578L18.6367 13H15.0312V10.5615C15.0312 9.53316 15.535 8.53125 17.1498 8.53125H18.7891V5.33203C18.7891 5.33203 17.3012 5.07812 15.8788 5.07812C12.9096 5.07812 10.9688 6.87781 10.9688 10.1359V13H7.66797V16.7578H10.9688V25.8421C11.6306 25.9459 12.309 26 13 26C13.691 26 14.3694 25.9459 15.0312 25.8421V16.7578H18.0604Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <button className="login-btn">Đăng nhập</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Modal Register */}
-        <div
-          className="modal fade"
-          id="registerModal"
-          tabIndex={-1}
-          aria-labelledby="registerModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered modal-lg">
-            <div className="modal-content">
-              <div className="form-auth" id="form-register">
-                <h2>Đăng ký</h2>
-                <div className="input-group">
-                  <input type="text" placeholder="Nhập số điện thoại" />
-                </div>
-                <div className="input-group" id="input-password">
-                  <input
-                    type="password"
-                    placeholder="Nhập mật khẩu"
-                    id="password"
-                  />
-                  <i className="fas fa-eye toggle-password" />
-                </div>
-                <div className="input-group" id="input-password">
-                  <input
-                    type="password"
-                    placeholder="Nhập lại mật khẩu"
-                    id="re-password"
-                  />
-                  <i className="fas fa-eye toggle-password" />
-                </div>
-                <button className="register-btn">Đăng ký</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*End Modal Register */}
-        {/* Modal Forgot Password */}
-        <div
-          className="modal fade"
-          id="forgotPasswordModal"
-          tabIndex={-1}
-          aria-labelledby="forgotPasswordModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered modal-lg">
-            <div className="modal-content">
-              <div className="form-auth" id="form-forgotPassword">
-                <h2>Quên mật khẩu</h2>
-                <div className="input-group">
-                  <input type="text" placeholder="Nhập số điện thoại" />
-                </div>
-                <a href="#">Gửi mã xác nhận</a>
-                <div className="input-group">
-                  <input type="text" placeholder="Nhập mã xác nhận" />
-                </div>
-                <button className="register-btn">Xác nhận</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*End Modal Forgot Password */}
-        {/* Modal compare */}
-        <div
-          className="modal fade"
-          id="compareModal"
-          tabIndex={-1}
-          aria-labelledby="compareModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered modal-lg">
-            <div className="modal-content" id="modal-content-compare">
-              <div className="header-search">
-                <form className="search-form">
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <button className="btn" type="submit">
-                        <svg
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M17.1901 15.4782L23.6458 21.934C23.8727 22.1611 24.0001 22.469 24 22.79C23.9999 23.111 23.8723 23.4189 23.6452 23.6458C23.4181 23.8727 23.1102 24.0001 22.7892 24C22.4682 23.9999 22.1604 23.8723 21.9335 23.6452L15.4778 17.1893C13.5479 18.6841 11.1211 19.3875 8.69104 19.1565C6.26097 18.9255 4.01018 17.7773 2.39656 15.9457C0.782936 14.114 -0.0723147 11.7364 0.00479537 9.29655C0.0819054 6.85668 1.08558 4.53783 2.81165 2.81172C4.53771 1.08561 6.85651 0.0819075 9.29632 0.00479549C11.7361 -0.0723165 14.1137 0.782955 15.9453 2.39662C17.7769 4.01028 18.925 6.26113 19.156 8.69126C19.387 11.1214 18.6836 13.5483 17.1889 15.4782M9.60045 16.7993C11.5099 16.7993 13.3412 16.0408 14.6914 14.6905C16.0416 13.3403 16.8001 11.509 16.8001 9.59949C16.8001 7.68997 16.0416 5.85866 14.6914 4.50843C13.3412 3.15819 11.5099 2.39964 9.60045 2.39964C7.69098 2.39964 5.85971 3.15819 4.50951 4.50843C3.15932 5.85866 2.40078 7.68997 2.40078 9.59949C2.40078 11.509 3.15932 13.3403 4.50951 14.6905C5.85971 16.0408 7.69098 16.7993 9.60045 16.7993Z"
-                            fill="#E82F35"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <input
-                      className="form-control"
-                      type="search"
-                      placeholder="Nhập tên laptop để tìm..."
-                      aria-label="Search"
-                    />
-                  </div>
-                </form>
-              </div>
-              <h2>Kết quả tìm kiếm</h2>
-              <div className>
-                <div className="frame-217">
-                  <div className="laptop-item-compare">
-                    <a href="./detail-product.html">
-                      <img
-                        className="image-laptop"
-                        src="./images/image 3.png"
-                        alt
-                      />
-                    </a>
-                    <div className="info-laptop">
-                      <p className="name-laptop">
-                        Laptop Lenovo Gaming LOQ 15IAX9
-                      </p>
-                    </div>
-                    <div className="price-item">
-                      <div className="price">
-                        <span className="price-original">24.990.000đ</span>
-                        <p className="price-reduced">21.690.000đ</p>
-                      </div>
-                      <div className="item-action">
-                        <button
-                          className="btn-compare"
-                          data-toggle="modal"
-                          data-target="#compareModal"
-                        >
-                          <svg
-                            width={14}
-                            height={14}
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                              fill="#E82F35"
-                            />
-                            <path
-                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                              stroke="#E82F35"
-                              strokeWidth={2}
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                          So sánh
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="laptop-item-compare">
-                    <a href="./detail-product.html">
-                      <img
-                        className="image-laptop"
-                        src="./images/image 3.png"
-                        alt
-                      />
-                    </a>
-                    <div className="info-laptop">
-                      <p className="name-laptop">
-                        Laptop Lenovo Gaming LOQ 15IAX9
-                      </p>
-                    </div>
-                    <div className="price-item">
-                      <div className="price">
-                        <span className="price-original">24.990.000đ</span>
-                        <p className="price-reduced">21.690.000đ</p>
-                      </div>
-                      <div className="item-action">
-                        <button
-                          className="btn-compare"
-                          data-toggle="modal"
-                          data-target="#compareModal"
-                        >
-                          <svg
-                            width={14}
-                            height={14}
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                              fill="#E82F35"
-                            />
-                            <path
-                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                              stroke="#E82F35"
-                              strokeWidth={2}
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                          So sánh
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="laptop-item-compare">
-                    <a href="./detail-product.html">
-                      <img
-                        className="image-laptop"
-                        src="./images/image 3.png"
-                        alt
-                      />
-                    </a>
-                    <div className="info-laptop">
-                      <p className="name-laptop">
-                        Laptop Lenovo Gaming LOQ 15IAX9
-                      </p>
-                    </div>
-                    <div className="price-item">
-                      <div className="price">
-                        <span className="price-original">24.990.000đ</span>
-                        <p className="price-reduced">21.690.000đ</p>
-                      </div>
-                      <div className="item-action">
-                        <button
-                          className="btn-compare"
-                          data-toggle="modal"
-                          data-target="#compareModal"
-                        >
-                          <svg
-                            width={14}
-                            height={14}
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                              fill="#E82F35"
-                            />
-                            <path
-                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                              stroke="#E82F35"
-                              strokeWidth={2}
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                          So sánh
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="laptop-item-compare">
-                    <a href="./detail-product.html">
-                      <img
-                        className="image-laptop"
-                        src="./images/image 3.png"
-                        alt
-                      />
-                    </a>
-                    <div className="info-laptop">
-                      <p className="name-laptop">
-                        Laptop Lenovo Gaming LOQ 15IAX9
-                      </p>
-                    </div>
-                    <div className="price-item">
-                      <div className="price">
-                        <span className="price-original">24.990.000đ</span>
-                        <p className="price-reduced">21.690.000đ</p>
-                      </div>
-                      <div className="item-action">
-                        <button
-                          className="btn-compare"
-                          data-toggle="modal"
-                          data-target="#compareModal"
-                        >
-                          <svg
-                            width={14}
-                            height={14}
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                              fill="#E82F35"
-                            />
-                            <path
-                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                              stroke="#E82F35"
-                              strokeWidth={2}
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                          So sánh
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*End Modal compare */}
+        <Login onLogin={setCurrentUser}></Login>
+        <Register></Register>
+        <ForgotPassword></ForgotPassword>
+        <Compare></Compare>
+        <User></User>
         {/*	Header	*/}
         <h4 id="header-top">Uy tín - Tận tâm - Chất lượng</h4>
         <div id="header">
@@ -497,7 +130,7 @@ const Header = () => {
                 <button
                   id="button-login"
                   data-toggle="modal"
-                  data-target="#loginModal"
+                  data-target={currentUser? "#userModal":"#loginModal"}
                   className="header-action"
                 >
                   <svg
@@ -512,7 +145,9 @@ const Header = () => {
                       fill="#E82F35"
                     />
                   </svg>
-                  Đăng nhập
+                  {
+                    currentUser? currentUser.username : "Đăng nhập"
+                  }
                 </button>
                 <a href="/cart" className="header-action">
                   <svg
@@ -529,7 +164,10 @@ const Header = () => {
                   </svg>
                   Giỏ hàng
                 </a>
-                <a href="https://maps.app.goo.gl/Fe8jzp8QCuJn1dPQ9" className="header-action">
+                <a
+                  href="https://maps.app.goo.gl/Fe8jzp8QCuJn1dPQ9"
+                  className="header-action"
+                >
                   <svg
                     width={25}
                     height={30}

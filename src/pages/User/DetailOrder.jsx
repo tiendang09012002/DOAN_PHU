@@ -1,5 +1,10 @@
 
+import { useNavigate } from "react-router-dom";
 const DetailOrder = () => {
+  const navigate = useNavigate();
+  const handleCancelOrder = () => {
+    navigate("/order-cancel");
+  };
   return (
     <>
       <div className="container">
@@ -192,7 +197,7 @@ const DetailOrder = () => {
               </div>
               <div>
                 <div className="action-cancel">
-                  <button className="button-cancel">
+                  <button className="button-cancel" onClick={handleCancelOrder}>
                     <svg
                       width={26}
                       height={26}

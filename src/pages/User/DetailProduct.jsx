@@ -1,6 +1,13 @@
 const DetailProduct = () => {
   return (
     <>
+      <div class="modal" tabindex="-1" id="billModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content-bill">
+            <img src="../../../public/images/bill.png" alt="" />
+          </div>
+        </div>
+      </div>
       <div id="body">
         <div className="container">
           <div id="navigation-bar">
@@ -28,12 +35,12 @@ const DetailProduct = () => {
             </svg>
             <h4>Trang chủ \ Laptop Lenovo Gaming LOQ 15IAX9</h4>
           </div>
-          <div id="main-top">
+          <div id="main-top-detail-product">
             <div className="row" />
             <div id="image-product" className="col-lg-8 col-md-6 col-sm-12">
               <div id="left-position-1">
                 <div id="left-left-position-1">
-                  <div
+                  <a
                     id="frame-75"
                     style={{
                       display: "flex",
@@ -41,7 +48,9 @@ const DetailProduct = () => {
                       flexDirection: "column",
                       alignItems: "center",
                       gap: 16,
+                      marginBottom: "40px",
                     }}
+                    href="https://www.youtube.com/watch?v=1d-SFLhyO9g"
                   >
                     <svg
                       width={55}
@@ -60,7 +69,7 @@ const DetailProduct = () => {
                       />
                     </svg>
                     <p>Video về sản phẩm</p>
-                  </div>
+                  </a>
                   <div
                     id="frame-76"
                     style={{
@@ -70,6 +79,8 @@ const DetailProduct = () => {
                       alignItems: "center",
                       gap: 16,
                     }}
+                    data-toggle="modal"
+                    data-target="#billModal"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -526,13 +537,69 @@ const DetailProduct = () => {
                   </tbody>
                 </table>
               </div>
-              <div id="compare-link">
+              <div
+                id="compare-link"
+                data-toggle="modal"
+                data-target="#compareModal"
+              >
                 <a href>+ So sánh cấu hình </a>
               </div>
               <div id="videos">
                 <h4>Video đánh giá sản phẩm</h4>
-                <img src="./images/image (12).png" alt />
-                <img src="./images/image (13).png" alt />
+                <a href="https://www.youtube.com/watch?v=z-TUOAfu-UA">
+                  <img src="./images/image (12).png" alt />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    style={{position: "absolute", right:"30%", top:"45%"}}
+                  >
+                    <g clip-path="url(#clip0_133_1707)">
+                      <path
+                        d="M78.3517 20.7959C77.4295 17.3688 74.7275 14.6673 71.301 13.7445C65.0406 12.0312 39.9992 12.0312 39.9992 12.0312C39.9992 12.0312 14.9584 12.0312 8.69808 13.6792C5.3375 14.6014 2.56957 17.3694 1.64733 20.7959C0 27.0556 0 40.0377 0 40.0377C0 40.0377 0 53.0852 1.64733 59.2796C2.57018 62.7061 5.27158 65.4081 8.69869 66.3309C15.0244 68.0442 39.9998 68.0442 39.9998 68.0442C39.9998 68.0442 65.0406 68.0442 71.301 66.3963C74.7281 65.474 77.4295 62.772 78.3523 59.3455C79.9997 53.0852 79.9997 40.1036 79.9997 40.1036C79.9997 40.1036 80.0656 27.0556 78.3517 20.7959Z"
+                        fill="#FF0000"
+                      />
+                      <path
+                        d="M32.0264 52.0311L52.8496 40.0378L32.0264 28.0444V52.0311Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_133_1707">
+                        <rect width="80" height="80" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/watch?v=z-TUOAfu-UA">
+                  <img src="./images/image (13).png" alt />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    style={{position: "absolute", right:"30%", bottom:"44%" }}
+                  >
+                    <g clip-path="url(#clip0_133_1707)">
+                      <path
+                        d="M78.3517 20.7959C77.4295 17.3688 74.7275 14.6673 71.301 13.7445C65.0406 12.0312 39.9992 12.0312 39.9992 12.0312C39.9992 12.0312 14.9584 12.0312 8.69808 13.6792C5.3375 14.6014 2.56957 17.3694 1.64733 20.7959C0 27.0556 0 40.0377 0 40.0377C0 40.0377 0 53.0852 1.64733 59.2796C2.57018 62.7061 5.27158 65.4081 8.69869 66.3309C15.0244 68.0442 39.9998 68.0442 39.9998 68.0442C39.9998 68.0442 65.0406 68.0442 71.301 66.3963C74.7281 65.474 77.4295 62.772 78.3523 59.3455C79.9997 53.0852 79.9997 40.1036 79.9997 40.1036C79.9997 40.1036 80.0656 27.0556 78.3517 20.7959Z"
+                        fill="#FF0000"
+                      />
+                      <path
+                        d="M32.0264 52.0311L52.8496 40.0378L32.0264 28.0444V52.0311Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_133_1707">
+                        <rect width="80" height="80" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
