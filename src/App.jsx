@@ -14,6 +14,7 @@ import BuyNow from "./pages/User/BuyNow";
 import DetailOrder from "./pages/User/DetailOrder";
 import OrderSuccess from "./pages/User/OrderSuccess";
 import OrderCancel from "./pages/User/OrderCancel";
+import Compare from "./pages/User/CompareProduct";
 function App() {
   return (
     <>
@@ -31,6 +32,8 @@ function App() {
           <Route path="/detail-order" element={<DetailOrder />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/introduce" element={<Introduce />} />
+          <Route path="/compare-product" element={<Compare />} />
+
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

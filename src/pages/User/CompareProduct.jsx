@@ -1,4 +1,4 @@
-const DetailOrder = () => {
+const Compare = () => {
   return (
     <>
       <div className="container">
@@ -204,4 +204,4 @@ const DetailOrder = () => {
   );
 };
 
-export default DetailOrder;
+export default Compare;

@@ -259,6 +259,7 @@ const DetailProduct = () => {
               </div>
               <div id="actions">
                 <button id="buy-now">
+                  <a href="/cart">
                   <svg
                     width="100%"
                     height={55}
@@ -272,6 +273,8 @@ const DetailProduct = () => {
                       fill="white"
                     />
                   </svg>
+                  </a>
+                  
                 </button>
                 <div
                   id="frame-94"

@@ -55,7 +55,9 @@ const Compare = ({ onLogin }) => {
                     />
                   </a>
                   <div className="info-laptop">
-                    <p className="name-laptop">Laptop Lenovo Gaming LOQ 15IAX9</p>
+                    <p className="name-laptop">
+                      Laptop Lenovo Gaming LOQ 15IAX9
+                    </p>
                   </div>
                   <div className="price-item">
                     <div className="price">
@@ -63,32 +65,34 @@ const Compare = ({ onLogin }) => {
                       <p className="price-reduced">21.690.000đ</p>
                     </div>
                     <div className="item-action">
-                      <button
-                        className="btn-compare"
-                        data-toggle="modal"
-                        data-target="#compareModal"
-                      >
-                        <svg
-                          width={14}
-                          height={14}
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                      <a href="/compare-product">
+                        <button
+                          className="btn-compare"
+                          data-toggle="modal"
+                          data-target="#compareModal"
                         >
-                          <path
-                            d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                            fill="#E82F35"
-                          />
-                          <path
-                            d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                            stroke="#E82F35"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        So sánh
-                      </button>
+                          <svg
+                            width={14}
+                            height={14}
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
+                              fill="#E82F35"
+                            />
+                            <path
+                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
+                              stroke="#E82F35"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                          So sánh
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -101,7 +105,9 @@ const Compare = ({ onLogin }) => {
                     />
                   </a>
                   <div className="info-laptop">
-                    <p className="name-laptop">Laptop Lenovo Gaming LOQ 15IAX9</p>
+                    <p className="name-laptop">
+                      Laptop Lenovo Gaming LOQ 15IAX9
+                    </p>
                   </div>
                   <div className="price-item">
                     <div className="price">
@@ -109,32 +115,34 @@ const Compare = ({ onLogin }) => {
                       <p className="price-reduced">21.690.000đ</p>
                     </div>
                     <div className="item-action">
-                      <button
-                        className="btn-compare"
-                        data-toggle="modal"
-                        data-target="#compareModal"
-                      >
-                        <svg
-                          width={14}
-                          height={14}
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                      <a href="/compare-product">
+                        <button
+                          className="btn-compare"
+                          data-toggle="modal"
+                          data-target="#compareModal"
                         >
-                          <path
-                            d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                            fill="#E82F35"
-                          />
-                          <path
-                            d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                            stroke="#E82F35"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        So sánh
-                      </button>
+                          <svg
+                            width={14}
+                            height={14}
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
+                              fill="#E82F35"
+                            />
+                            <path
+                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
+                              stroke="#E82F35"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                          So sánh
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -147,7 +155,9 @@ const Compare = ({ onLogin }) => {
                     />
                   </a>
                   <div className="info-laptop">
-                    <p className="name-laptop">Laptop Lenovo Gaming LOQ 15IAX9</p>
+                    <p className="name-laptop">
+                      Laptop Lenovo Gaming LOQ 15IAX9
+                    </p>
                   </div>
                   <div className="price-item">
                     <div className="price">
@@ -155,32 +165,34 @@ const Compare = ({ onLogin }) => {
                       <p className="price-reduced">21.690.000đ</p>
                     </div>
                     <div className="item-action">
-                      <button
-                        className="btn-compare"
-                        data-toggle="modal"
-                        data-target="#compareModal"
-                      >
-                        <svg
-                          width={14}
-                          height={14}
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                      <a href="/compare-product">
+                        <button
+                          className="btn-compare"
+                          data-toggle="modal"
+                          data-target="#compareModal"
                         >
-                          <path
-                            d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                            fill="#E82F35"
-                          />
-                          <path
-                            d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                            stroke="#E82F35"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        So sánh
-                      </button>
+                          <svg
+                            width={14}
+                            height={14}
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
+                              fill="#E82F35"
+                            />
+                            <path
+                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
+                              stroke="#E82F35"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                          So sánh
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -193,7 +205,9 @@ const Compare = ({ onLogin }) => {
                     />
                   </a>
                   <div className="info-laptop">
-                    <p className="name-laptop">Laptop Lenovo Gaming LOQ 15IAX9</p>
+                    <p className="name-laptop">
+                      Laptop Lenovo Gaming LOQ 15IAX9
+                    </p>
                   </div>
                   <div className="price-item">
                     <div className="price">
@@ -201,32 +215,34 @@ const Compare = ({ onLogin }) => {
                       <p className="price-reduced">21.690.000đ</p>
                     </div>
                     <div className="item-action">
-                      <button
-                        className="btn-compare"
-                        data-toggle="modal"
-                        data-target="#compareModal"
-                      >
-                        <svg
-                          width={14}
-                          height={14}
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
+                      <a href="/compare-product">
+                        <button
+                          className="btn-compare"
+                          data-toggle="modal"
+                          data-target="#compareModal"
                         >
-                          <path
-                            d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
-                            fill="#E82F35"
-                          />
-                          <path
-                            d="M1.5 7.33057H12.5M7 12.8306V1.83057"
-                            stroke="#E82F35"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        So sánh
-                      </button>
+                          <svg
+                            width={14}
+                            height={14}
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 7.33057H12.5H1.5ZM7 12.8306V1.83057V12.8306Z"
+                              fill="#E82F35"
+                            />
+                            <path
+                              d="M1.5 7.33057H12.5M7 12.8306V1.83057"
+                              stroke="#E82F35"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                          So sánh
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>

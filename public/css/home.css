@@ -388,7 +388,7 @@ span {
 
   /* Body 3 Desktop */
   font-family: Inter;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 120%; /* 24px */
@@ -404,7 +404,7 @@ span {
 #footer-top h3 {
   color: #e82f35;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 24px */
@@ -419,7 +419,7 @@ span {
 #footer-bottom p {
   color: #fff;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 24px */
@@ -1844,8 +1844,8 @@ td {
 }
 #order-placed {
   position: absolute;
-  left: 62%;
-  top: 20%;
+  left: 60%;
+  top: 18%;
   display: flex;
   width: 188px;
   height: 42px;
