@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* Body 3 Desktop */
+  color: #000000;
+  /* Body 3 Destop Bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+body {
+  background: url(<../../../images/background\ admin.png) lightgray 50% / cover
+    no-repeat;
+}
+.container-admin {
+  max-width: 1386px !important;
+  padding: 0 10px 0 10px;
+}
+
+#title {
+  color: #595959;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 100px;
+  padding: 40px 0px 20px 14%;
+}
+.list-group {
+  height: 478px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  background: #fff;
+  margin-left: 50px;
+}
+.list-group #main-menu > a {
+  color: #e82f35;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.list-group #main-menu > a svg {
+  float: right;
+  margin-top: 4px;
+}
+.list-group .list-group-item {
+  border: none;
+}
+#main-menu {
+  padding: 28px 24px 25px 24px;
+}
+.collapse .list-group-item {
+  display: flex;
+  padding: 8px 74px 8px 10px;
+  margin-left: 40px;
+  gap: 10px;
+  align-self: stretch;
+  color: #9c9c9c;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.collapse .list-group-item-action {
+  display: flex;
+  padding: 8px 117px 8px 10px;
+  width: 278px;
+  margin-left: 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background: #e82f35;
+  color: #fff;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+}
+
+.main {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  background: #fff;
+  margin-left: 12px;
+}
+
+.main h4 {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  background: #e82f35;
+  margin: 30px 10px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 28.8px */
+}
+.main .main-item {
+  display: flex;
+}
+
+.main .form-add h5 {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: inline-flex;
+  padding: 10px 50px;
+  margin-bottom: 20px;
+  align-items: center;
+  border-radius: 3px;
+  background: #cecece;
+}
+
+.main .form-add input {
+  display: flex;
+  height: 48px;
+  width: 290px;
+  padding: 12px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #bcbcbc;
+  /* Body02 */
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 15.6px */
+}
+
+.main .form-add button {
+  float: right;
+  padding: 6px;
+  border-radius: 3px;
+  background: rgba(48, 48, 48, 0.3);
+  color: #fff;
+
+  /* SS */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  margin-top: 10px;
+}
+.table > thead {
+  border-radius: 10px;
+  background: #cecece;
+}
+.table > thead > tr > th {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  background: #cecece;
+  padding: 9px;
+  text-align: center;
+}
+.table > tbody > tr > td > input {
+  color: #bcbcbc;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.list-user .table > tbody > tr > td {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  text-align: center;
+}
+.list-user button {
+  float: right;
+  padding: 6px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(48, 48, 48, 0.3);
+  color: #fff;
+
+  /* SS */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.filter-product {
+  display: inline-flex;
+  align-items: center;
+  gap: 57px;
+  margin-left: 12px;
+  margin-bottom: 20px;
+}
+.filter-product label {
+  margin-right: 5px;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.filter-product .search {
+  width: 301px;
+  height: 29px;
+  gap: 10px;
+}
+.filter-product .search input {
+  width: 200px;
+}
+.filter-product .search #name-product {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.btn-search {
+  display: flex;
+  width: 112px;
+  height: 20px;
+  padding: 6px;
+  margin-top: -5px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 3px;
+  background: rgba(48, 48, 48, 0.3);
+  color: #fff;
+
+  /* SS */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 10px;
+}
+.list-product .table > thead > tr > th {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.title-product {
+  width: 300px;
+  text-align: left;
+}
+.list-product svg {
+  margin-left: 10px;
+}
+input[type="checkbox"]:checked {
+  accent-color: green;
+}
+.main .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0;
+}
+.table td {
+  border: none;
+}
+.config .table label {
+  text-align: right;
+  display: block;
+}
+.config .table .title {
+  width: 200px;
+}
+.logo {
+  display: block;
+  margin-top: 10px;
+  padding: 20px;
+  width: 174px;
+  height: 77px;
+  flex-shrink: 0;
+  background: #f3f3f3;
+}
+.table-configs span {
+  color: #000;
+
+  /* SS */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 5px;
+}
+
+.table-configs button {
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.44);
+  background: rgba(174, 174, 174, 0.3);
+  border: none;
+  padding: 6px;
+}
+.table-configs .title {
+  color: #000;
+
+  /* Body 3 Destop Bold */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 15px;
+}
+.table-configs .favicon {
+  width: 121px;
+  height: 84px;
+  background: #f3f3f3;
+}
+.table-configs li {
+  color: #000;
+
+  /* SS */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 20px;
+  
+}
+.table-configs ul{
+  margin-top: 10px;
+}

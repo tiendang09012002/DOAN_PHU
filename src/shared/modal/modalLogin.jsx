@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ onLogin }) => {
@@ -20,6 +20,16 @@ const Login = ({ onLogin }) => {
       alert("Invalid username or password.");
     }
   };
+  const initializeDefaultUser = () => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const defaultUser = { username: "admin", password: "admin", role:1 };
+    const userDemo = { username: "user", password: "user", role:0 };
+    users.push(defaultUser, userDemo);
+    localStorage.setItem("users", JSON.stringify(users));
+  };
+  useEffect(() => {
+    initializeDefaultUser();
+  }, []);
   return (
     <>
       {/* Modal */}

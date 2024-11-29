@@ -8,23 +8,7 @@ const Header = () => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("currentUser")) || null
   );
-
-  // Hàm tạo user mặc định nếu chưa tồn tại
-  const initializeDefaultUser = () => {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const defaultUser = { username: "admin", password: "admin" };
-
-    // Kiểm tra nếu user mặc định chưa có thì thêm vào
-    if (!users.some((user) => user.username === "admin")) {
-      users.push(defaultUser);
-      localStorage.setItem("users", JSON.stringify(users));
-    }
-  };
-
-  // Chạy khi ứng dụng được khởi tạo
-  useEffect(() => {
-    initializeDefaultUser();
-  }, []);
+ 
   return (
     <>
       <div>
