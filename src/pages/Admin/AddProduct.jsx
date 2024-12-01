@@ -21,7 +21,7 @@ const AddProduct = () => {
         <div className="container contaier-admin">
           <div className="row">
             <div className="list-group col-lg-3 col-md-4 col-sm-12">
-              <div id="main-menu">
+            <div id="main-menu">
                 {/* Quản lý Admin */}
                 <a
                   href="#admin-menu"
@@ -46,11 +46,11 @@ const AddProduct = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="admin-menu">
-                  <a href="#" className="list-group-item-action">
+                <div className="show" id="admin-menu">
+                  <a href="/" className="list-group-item-action">
                     Quản lý Admin
                   </a>
-                  <a href="#" className="list-group-item">
+                  <a href="/admin/configs" className="list-group-item">
                     Thông tin trang web
                   </a>
                 </div>
@@ -78,11 +78,11 @@ const AddProduct = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="product-category-menu">
-                  <a href="#" className="list-group-item">
+                <div className="show" id="product-category-menu">
+                  <a href="/admin/categories" className="list-group-item">
                     Danh mục laptop
                   </a>
-                  <a href="#" className="list-group-item">
+                  <a href="/admin/brands" className="list-group-item">
                     Danh mục hãng
                   </a>
                 </div>
@@ -110,11 +110,11 @@ const AddProduct = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="product-post-menu">
-                  <a href="#" className="list-group-item">
+                <div className="show" id="product-post-menu">
+                  <a href="/admin/products" className="list-group-item">
                     Danh sách sản phẩm
                   </a>
-                  <a href="#" className="list-group-item">
+                  <a href="/admin/add-product" className="list-group-item">
                     Thêm mới sản phẩm
                   </a>
                 </div>
@@ -142,8 +142,8 @@ const AddProduct = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="order-menu">
-                  <a href="#" className="list-group-item">
+                <div className="show" id="order-menu">
+                  <a href="/admin/orders" className="list-group-item">
                     Danh sách đơn đặt hàng
                   </a>
                 </div>
@@ -375,77 +375,77 @@ const AddProduct = () => {
                       <td>
                       <div class="info-container">
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add-add">
                 <label for="cpu">CPU</label>
                 <input type="text" id="cpu" name="cpu"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="wifi">Wifi + Bluetooth</label>
                 <input type="text" id="wifi" name="wifi"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="ram">Ram</label>
                 <input type="text" id="ram" name="ram"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="webcam">Webcam</label>
                 <input type="text" id="webcam" name="webcam"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="disk">Ổ cứng</label>
                 <input type="text" id="disk" name="disk"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="os">Hệ điều hành</label>
                 <input type="text" id="os" name="os"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="gpu">Card đồ họa</label>
                 <input type="text" id="gpu" name="gpu"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="battery">Pin</label>
                 <input type="text" id="battery" name="battery"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="screen">Màn hình</label>
                 <input type="text" id="screen" name="screen"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="weight">Trọng lượng</label>
                 <input type="text" id="weight" name="weight"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="connectivity">Cổng kết nối</label>
                 <input type="text" id="connectivity" name="connectivity"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="color">Màu sắc</label>
                 <input type="text" id="color" name="color"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="keyboard">Bàn phím</label>
                 <input type="text" id="keyboard" name="keyboard"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="size">Kích thước</label>
                 <input type="text" id="size" name="size"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="audio">Audio</label>
                 <input type="text" id="audio" name="audio"/>
             </div>

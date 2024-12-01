@@ -21,7 +21,7 @@ const OrderDetail = () => {
         <div className="container contaier-admin">
           <div className="row">
             <div className="list-group col-lg-3 col-md-4 col-sm-12">
-              <div id="main-menu">
+            <div id="main-menu">
                 {/* Quản lý Admin */}
                 <a
                   href="#admin-menu"
@@ -46,11 +46,11 @@ const OrderDetail = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="admin-menu">
-                  <a href="#" className="list-group-item-action">
+                <div className="show" id="admin-menu">
+                  <a href="/" className="list-group-item-action">
                     Quản lý Admin
                   </a>
-                  <a href="#" className="list-group-item">
+                  <a href="/admin/configs" className="list-group-item">
                     Thông tin trang web
                   </a>
                 </div>
@@ -78,11 +78,11 @@ const OrderDetail = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="product-category-menu">
-                  <a href="#" className="list-group-item">
+                <div className="show" id="product-category-menu">
+                  <a href="/admin/categories" className="list-group-item">
                     Danh mục laptop
                   </a>
-                  <a href="#" className="list-group-item">
+                  <a href="/admin/brands" className="list-group-item">
                     Danh mục hãng
                   </a>
                 </div>
@@ -110,12 +110,12 @@ const OrderDetail = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="product-post-menu">
-                  <a href="#" className="list-group-item">
+                <div className="show" id="product-post-menu">
+                  <a href="/admin/products" className="list-group-item">
                     Danh sách sản phẩm
                   </a>
-                  <a href="#" className="list-group-item">
-                    Chỉnh sửa sản phẩm
+                  <a href="/admin/add-product" className="list-group-item">
+                    Thêm mới sản phẩm
                   </a>
                 </div>
                 {/* Quản lý Đơn hàng */}
@@ -142,8 +142,8 @@ const OrderDetail = () => {
                     />
                   </svg>
                 </a>
-                <div className="collapse" id="order-menu">
-                  <a href="#" className="list-group-item">
+                <div className="show" id="order-menu">
+                  <a href="/admin/orders" className="list-group-item">
                     Danh sách đơn đặt hàng
                   </a>
                 </div>

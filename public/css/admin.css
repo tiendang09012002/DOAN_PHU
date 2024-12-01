@@ -14,10 +14,7 @@ body {
   background: url(<../../../images/background\ admin.png) lightgray 50% / cover
     no-repeat;
 }
-.container-admin {
-  max-width: 1386px !important;
-  padding: 0 10px 0 10px;
-}
+
 
 #title {
   color: #595959;
@@ -56,10 +53,10 @@ body {
 #main-menu {
   padding: 28px 24px 25px 24px;
 }
-.collapse .list-group-item {
+.show .list-group-item {
   display: flex;
   padding: 8px 74px 8px 10px;
-  margin-left: 40px;
+  margin-left: 48px;
   gap: 10px;
   align-self: stretch;
   color: #9c9c9c;
@@ -69,10 +66,10 @@ body {
   font-weight: 600;
   line-height: 120%; /* 19.2px */
 }
-.collapse .list-group-item-action {
+.show .list-group-item-action {
   display: flex;
-  padding: 8px 117px 8px 10px;
-  width: 278px;
+  padding: 8px 100px 8px 20px;
+  width: 260px;
   margin-left: 18px;
   justify-content: center;
   align-items: center;
@@ -220,7 +217,7 @@ body {
 .filter-product {
   display: inline-flex;
   align-items: center;
-  gap: 57px;
+  gap: 10px;
   margin-left: 12px;
   margin-bottom: 20px;
 }
@@ -234,12 +231,15 @@ body {
   line-height: normal;
 }
 .filter-product .search {
-  width: 301px;
+  width: 280px;
   height: 29px;
   gap: 10px;
 }
 .filter-product .search input {
-  width: 200px;
+  width: 160px;
+}
+.filter-product .brand{
+  width: 30%;
 }
 .filter-product .search #name-product {
   font-family: Inter;
@@ -248,10 +248,11 @@ body {
   font-weight: 500;
   line-height: normal;
 }
-
+.filter-product select{
+  width: 40%;
+}
 .btn-search {
   display: flex;
-  width: 112px;
   height: 20px;
   padding: 6px;
   margin-top: -5px;
@@ -280,12 +281,21 @@ body {
   font-weight: 700;
   line-height: normal;
 }
+.list-product img{
+  width: 150px;
+}
+.list-product input{
+  margin-top: 10px;
+  margin-left: 30px;
+}
 .title-product {
   width: 300px;
   text-align: left;
 }
 .list-product svg {
   margin-left: 10px;
+  width: 20px;
+
 }
 input[type="checkbox"]:checked {
   accent-color: green;
@@ -388,19 +398,19 @@ input[type="checkbox"]:checked {
   margin-bottom: 15px;
 }
 
-.info-detail {
+.info-detail-add {
   display: flex;
   width: 48%;
   background: none;
 }
 
-.info-detail label {
+.info-detail-add label {
   margin-bottom: 5px;
   font-weight: bold;
   width: 100px;
 }
 
-.info-detail input {
+.info-detail-add input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -493,7 +503,7 @@ input[type="checkbox"]:checked {
   background-color: #fff;
   margin-top: 10px;
 }
-.order-detail .info-detail {
+.order-detail .info-detail-add {
   padding: 4px;
   border-radius: 2px;
   background: #e5e5e5;
