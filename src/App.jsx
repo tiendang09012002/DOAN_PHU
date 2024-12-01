@@ -21,6 +21,9 @@ import Config from "./pages/Admin/Config";
 import Category from "./pages/Admin/Category";
 import Brand from "./pages/Admin/Brand";
 import AddProduct from "./pages/Admin/AddProduct";
+import EditProduct from "./pages/Admin/EditProduct";
+import Order from "./pages/Admin/Order";
+import OrderDetail from "./pages/Admin/OrderDetail";
 function App() {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("currentUser")) || null
@@ -58,6 +61,10 @@ function App() {
               <Route path="/admin/categories" element={<Category />} />
               <Route path="/admin/brands" element={<Brand />} />
               <Route path="/admin/add-product" element={<AddProduct />} />
+              <Route path="/admin/edit-product" element={<EditProduct />} />
+              <Route path="/admin/order" element={<Order />} />
+              <Route path="/admin/order-detail" element={<OrderDetail />} />
+
             </Routes>
           </>
         ) : (

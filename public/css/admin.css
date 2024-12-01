@@ -346,7 +346,6 @@ input[type="checkbox"]:checked {
   font-weight: 600;
   line-height: normal;
   padding-top: 15px;
-
 }
 .table-configs .favicon {
   width: 121px;
@@ -363,14 +362,146 @@ input[type="checkbox"]:checked {
   font-weight: 500;
   line-height: normal;
   margin-left: 20px;
-  
 }
-.table-configs ul{
+.table-configs ul {
   margin-top: 10px;
 }
-.ck-voice-label{
+.ck-voice-label {
   display: none !important;
 }
 .ck-content {
   height: 200px !important; /* Tăng chiều cao */
+}
+.info-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.info-detail {
+  display: flex;
+  width: 48%;
+  background: none;
+}
+
+.info-detail label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.info-detail input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.table-container td {
+  color: #000 !important;
+}
+
+.table-container > table > thead th {
+  background-color: #cecece;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.table-order-detail td {
+  padding: 0;
+  padding-bottom: 10px;
+  padding-right: 20px;
+}
+.table-order-detail label {
+  float: right;
+}
+.table-order-detail .content-info {
+  width: 450px;
+}
+.table-order-detail .content-info p {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.order-detail {
+  width: 790px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 0;
+  margin-left: 50px;
+}
+
+.order-detail .total-price {
+  text-align: right;
+  padding-right: 50px;
+}
+.order-detail .total-price span {
+  color: #e82f35;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 24px */
+}
+.order-detail .item-cart {
+  display: flex;
+  width: 696px;
+  height: 121px;
+  align-items: center;
+  gap: 49px;
+  flex-shrink: 0;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #c9c9c9;
+  margin-left: 40px;
+}
+.order-detail .item-cart .info-laptop {
+  display: flex;
+  width: 458px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: -70px;
+}
+.order-detail .item-cart .info-laptop .config-laptop {
+  width: 250px;
+}
+.order-detail .item-cart .price-item {
+  margin-top: -30px;
+}
+
+.order-detail .item-cart .delete-item button {
+  border: none;
+  background-color: #fff;
+  margin-top: 10px;
+}
+.order-detail .info-detail {
+  padding: 4px;
+  border-radius: 2px;
+  background: #e5e5e5;
+}
+.action-order{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

@@ -11,7 +11,7 @@ import {
 import "ckeditor5/ckeditor5.css";
 import "ckeditor5-premium-features/ckeditor5-premium-features.css";
 
-const AddProduct = () => {
+const EditProduct = () => {
   return (
     <>
       {/*    Header    */}
@@ -115,7 +115,7 @@ const AddProduct = () => {
                     Danh sách sản phẩm
                   </a>
                   <a href="#" className="list-group-item">
-                    Thêm mới sản phẩm
+                    Chỉnh sửa sản phẩm
                   </a>
                 </div>
                 {/* Quản lý Đơn hàng */}
@@ -181,6 +181,7 @@ const AddProduct = () => {
                           style={{ width: "20px" }}
                           name=""
                           id=""
+                          checked="true"
                         />
                         <label
                           style={{ marginLeft: "-15px", marginTop: "5px" }}
@@ -517,7 +518,7 @@ const AddProduct = () => {
                     border: "none",
                   }}
                 >
-                  Thêm mới
+                  Cập nhật
                 </button>
               </div>
             </div>
@@ -529,4 +530,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default EditProduct;
