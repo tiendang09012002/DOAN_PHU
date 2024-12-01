@@ -11,7 +11,7 @@ import {
 import "ckeditor5/ckeditor5.css";
 import "ckeditor5-premium-features/ckeditor5-premium-features.css";
 
-const Config = () => {
+const AddProduct = () => {
   return (
     <>
       {/*    Header    */}
@@ -150,83 +150,68 @@ const Config = () => {
               </div>
             </div>
             <div className="main col-lg-8 col-md-8 col-sm-12">
-              <h4>Thông tin trang web</h4>
+              <h4>Thêm mới sản phẩm</h4>
               <div className="config col-lg-12 col-md-12 col-sm-12">
                 <table class="table table-configs">
                   <tbody>
                     <tr>
                       <td className="title">
-                        <label htmlFor="logo">Logo</label>
+                        <label htmlFor="logo">Danh mục laptop</label>
                       </td>
-                      <td>
-                        <button>Chọn tệp</button>
-                        <span>Kích thước khuyến nghị 150x44px</span>
-                        <img
-                          className="logo"
-                          src="../../../public/images/Group.png"
-                          alt=""
+                      <td style={{ display: "flex", gap: "20px" }}>
+                        <select id="">
+                          <option value=""></option>
+                          <option value="1">Laptop gaming</option>
+                          <option value="2">Laptop văn phòng</option>
+                        </select>
+                        <label style={{ marginTop: "5px" }} htmlFor="logo">
+                          Danh mục hãng
+                        </label>
+                        <select id="" style={{width:"150px"}}>
+                          <option value=""></option>
+                          <option value="1">Dell</option>
+                          <option value="2">Acer</option>
+                          <option value="1">MSI</option>
+                          <option value="2">Lenovo</option>
+                          <option value="1">Asus</option>
+                          <option value="2">HP</option>
+                        </select>
+                        <input
+                          type="checkbox"
+                          style={{ width: "20px" }}
+                          name=""
+                          id=""
                         />
+                        <label
+                          style={{ marginLeft: "-30px", marginTop: "5px" }}
+                          htmlFor=""
+                        >
+                          Sản phẩm hot
+                        </label>
                       </td>
                     </tr>
                     <tr>
                       <td className="title">
-                        <label htmlFor="logo"> Logo Footer</label>
+                        <label htmlFor="logo">Tiêu đề</label>
                       </td>
                       <td>
-                        <button>Chọn tệp</button>
-                        <span>Kích thước khuyến nghị 238x70px</span>
-                        <img
-                          className="logo"
-                          src="../../../public/images/Group (1).png"
-                          alt=""
-                        />
+                        <input  type="text" name="" id="" />
                       </td>
                     </tr>
                     <tr>
                       <td className="title">
-                        <label htmlFor="logo">Favicon</label>
+                        <label htmlFor="logo">Thẻ tiêu đề</label>
                       </td>
                       <td>
-                        <button>Chọn tệp</button>
-                        <span>Kích thước khuyến nghị 16x16px</span>
-                        <img
-                          className="favicon logo"
-                          src="../../../public/images/Group (2).png"
-                          alt=""
-                        />
+                        <input type="text" name="" id="" />
                       </td>
                     </tr>
                     <tr>
                       <td className="title">
-                        <label htmlFor="">Ảnh slider</label>
+                        <label htmlFor="">Thông tin về sản phẩm</label>
                       </td>
                       <td>
-                        <button>Chọn tệp</button>
-                        <ul>
-                          <li>Kích thước khuyến nghị 852x426px</li>
-                          <li>
-                            Chọn ảnh dạng (jpg, jpeg, png, gif) dưới 4MB, tối đa
-                            10 ảnh
-                          </li>
-                          <li>Ảnh đầu tiên sẽ là ảnh đại diện</li>
-                        </ul>
-                        <div style={{ display: "flex", gap: "16px" }}>
-                          <img
-                            className=""
-                            src="../../../public/images/image (19).png"
-                            alt=""
-                          />
-                          <img
-                            className=""
-                            src="../../../public/images/image (20).png"
-                            alt=""
-                          />
-                          <img
-                            className=""
-                            src="../../../public/images/image (21).png"
-                            alt=""
-                          />
-                        </div>
+                        <textarea style={{width:"97%", height:"100px"}} name="" id=""></textarea>
                       </td>
                     </tr>
                     <tr>
@@ -394,10 +379,10 @@ const Config = () => {
                     alignItems: "center",
                     gap: "6px",
                     marginLeft: "44%",
-                    marginBottom:"80px",
+                    marginBottom: "80px",
                     marginTop: "50px",
-                    color:"#FFF",
-                    border:"none"
+                    color: "#FFF",
+                    border: "none",
                   }}
                 >
                   Cập nhật
@@ -412,4 +397,4 @@ const Config = () => {
   );
 };
 
-export default Config;
+export default AddProduct;

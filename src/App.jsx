@@ -18,6 +18,9 @@ import Compare from "./pages/User/CompareProduct";
 import Dashboard from "./pages/Admin/Dashboard";
 import Product from "./pages/Admin/Product";
 import Config from "./pages/Admin/Config";
+import Category from "./pages/Admin/Category";
+import Brand from "./pages/Admin/Brand";
+import AddProduct from "./pages/Admin/AddProduct";
 function App() {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("currentUser")) || null
@@ -52,7 +55,9 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/admin/products" element={<Product />} />
               <Route path="/admin/configs" element={<Config />} />
-              
+              <Route path="/admin/categories" element={<Category />} />
+              <Route path="/admin/brands" element={<Brand />} />
+              <Route path="/admin/add-product" element={<AddProduct />} />
             </Routes>
           </>
         ) : (

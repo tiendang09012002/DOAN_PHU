@@ -92,6 +92,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.39);
   background: #fff;
   margin-left: 12px;
+  margin-bottom: 50px;
 }
 
 .main h4 {
@@ -315,6 +316,7 @@ input[type="checkbox"]:checked {
   flex-shrink: 0;
   background: #f3f3f3;
 }
+
 .table-configs span {
   color: #000;
 
@@ -344,6 +346,7 @@ input[type="checkbox"]:checked {
   font-weight: 600;
   line-height: normal;
   padding-top: 15px;
+
 }
 .table-configs .favicon {
   width: 121px;
@@ -364,4 +367,10 @@ input[type="checkbox"]:checked {
 }
 .table-configs ul{
   margin-top: 10px;
+}
+.ck-voice-label{
+  display: none !important;
+}
+.ck-content {
+  height: 200px !important; /* Tăng chiều cao */
 }
