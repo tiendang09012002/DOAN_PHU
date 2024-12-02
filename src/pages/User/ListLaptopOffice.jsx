@@ -1,4 +1,4 @@
-const ListLaptop = () => {
+const ListLaptopOffice = () => {
   return (
     <>
       {/*	Body	*/}
@@ -27,10 +27,10 @@ const ListLaptop = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h4>Trang chủ \ Laptop Gaming</h4>
+            <h4>Trang chủ \ Laptop văn phòng</h4>
           </div>
           <div className="banner-laptop-option">
-            <img src="./images/image (18).png" alt />
+            <img src="./images/image (32).png" alt />
           </div>
           <div className="filter">
             <div className="filter-options">
@@ -1946,4 +1946,4 @@ const ListLaptop = () => {
   );
 };
 
-export default ListLaptop;
+export default ListLaptopOffice;

@@ -186,8 +186,8 @@ const Contact = () => {
               </div>
               <button id="submit-contact">Gửi thông tin</button>
             </div>
-            <div id="content" className="col-lg-4 col-md-4 col-sm-12">
-              <input
+            <div id="content" style={{marginLeft:"-20px"}} className="col-lg-4 col-md-4 col-sm-12">
+              <textarea
                 type="text"
                 name="content"
                 id="content-input"

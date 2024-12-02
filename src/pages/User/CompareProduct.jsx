@@ -30,8 +30,8 @@ const Compare = () => {
         {/*	Body	*/}
         <div className="container" id="compare-container">
           <table className="specs-table">
-            <tbody>
-              <tr>
+            <tbody style={{position:"relative"}}>
+              <tr className="sticky-row">
                 <td className="title-compare" id="none-td" />
                 <td className="product">
                   <div className="item-compare">
@@ -82,6 +82,7 @@ const Compare = () => {
                   </div>
                 </td>
               </tr>
+
               <tr>
                 <td className="title-compare">CPU</td>
                 <td>Intel Core i7-12700H up to 4.7GHz, 24MB Cache</td>

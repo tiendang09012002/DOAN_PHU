@@ -1,4 +1,4 @@
-const CategoryBrand = () => {
+const CategoryBrand1 = () => {
   return (
     <>
       {/*	Body	*/}
@@ -27,10 +27,10 @@ const CategoryBrand = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h4>Trang chủ \ Laptop Lenovo</h4>
+            <h4>Trang chủ \ Laptop Asus</h4>
           </div>
           <div className="banner-category">
-            <img src="./images/Rectangle 24 (1).png" alt />
+            <img src="./images/Rectangle 24.png" alt />
           </div>
           <div className="filter">
             <div className="filter-options">
@@ -2143,4 +2143,4 @@ const CategoryBrand = () => {
   );
 };
 
-export default CategoryBrand;
+export default CategoryBrand1;

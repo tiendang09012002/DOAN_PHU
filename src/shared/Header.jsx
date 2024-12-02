@@ -1,4 +1,5 @@
 import Compare from "./modal/modalCompare";
+import Filter from "./modal/modalFilter";
 import ForgotPassword from "./modal/modalForgotPassword";
 import Login from "./modal/modalLogin";
 import Register from "./modal/modalRegister";
@@ -8,7 +9,7 @@ const Header = () => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("currentUser")) || null
   );
- 
+
   return (
     <>
       <div>
@@ -17,6 +18,7 @@ const Header = () => {
         <ForgotPassword></ForgotPassword>
         <Compare></Compare>
         <User></User>
+        <Filter></Filter>
         {/*	Header	*/}
         <h4 id="header-top">Uy tín - Tận tâm - Chất lượng</h4>
         <div id="header">
@@ -26,6 +28,7 @@ const Header = () => {
                 <div className="header-logo row">
                   <a href="/">
                     <svg
+
                       width={149}
                       height={44}
                       viewBox="0 0 149 44"
@@ -67,7 +70,8 @@ const Header = () => {
                   <form className="search-form">
                     <div className="input-group">
                       <div className="input-group-prepend">
-                        <button className="btn" type="button">
+                        <button                       data-toggle="modal"
+                      data-target="#filterModal" className="btn" type="button">
                           <svg
                             width={24}
                             height={20}
@@ -114,7 +118,7 @@ const Header = () => {
                 <button
                   id="button-login"
                   data-toggle="modal"
-                  data-target={currentUser? "#userModal":"#loginModal"}
+                  data-target={currentUser ? "#userModal" : "#loginModal"}
                   className="header-action"
                 >
                   <svg
@@ -129,9 +133,7 @@ const Header = () => {
                       fill="#E82F35"
                     />
                   </svg>
-                  {
-                    currentUser? currentUser.username : "Đăng nhập"
-                  }
+                  {currentUser ? currentUser.username : "Đăng nhập"}
                 </button>
                 <a href="/cart" className="header-action">
                   <svg
@@ -189,7 +191,7 @@ const Header = () => {
                   <div id="menu">
                     <ul>
                       <li className="menu-item">
-                        <a href="/list-product">
+                        <a href="/list-product-office">
                           <svg
                             className="icon-laptop"
                             width={29}
@@ -207,7 +209,7 @@ const Header = () => {
                         </a>
                       </li>
                       <li className="menu-item">
-                        <a href="/list-product">
+                        <a href="/list-product-graphic">
                           <svg
                             className="icon-laptop"
                             width={29}

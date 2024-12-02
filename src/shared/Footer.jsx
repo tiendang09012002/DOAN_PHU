@@ -54,14 +54,14 @@ const Footer = () => {
                   </a>
                 </h2>
               </div>
-              <div id="about-us" className="col-lg-3 col-md-6 col-sm-12">
+              <div style={{marginRight:"62px"}}  id="about-us" className="col-lg-3 col-md-6 col-sm-12">
                 <h3>VỀ CHÚNG TÔI</h3>
-                <p>
+                <p style={{width:"250px"}}>
                   Khoa CNTT - Đại Học Mở Hà Nội Đồ án tốt nghiệp ngành CNĐPT
                   Sinh viên thực hiện: Lê Trọng Phú MSV: 20A10010258
                 </p>
               </div>
-              <div id="info" className="col-lg-3 col-md-6 col-sm-12">
+              <div style={{marginRight:"50px"}}  id="info" className="col-lg-2 col-md-6 col-sm-12">
                 <h3>THÔNG TIN</h3>
                 <p>Thông tin cửa hàng</p>
                 <p>Thông tin bảo hành</p>

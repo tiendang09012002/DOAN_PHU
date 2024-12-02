@@ -85,11 +85,12 @@ const Home = () => {
               <div id="main">
                 {/*	Slider	*/}
                 <div id="main-top">
-                  <div id="frame-24">
+                  <div id="frame-24"  >
                     <div
                       id="slide"
                       className="carousel slide"
                       data-ride="carousel"
+                      style={{}}
                     >
                       {/* Indicators */}
                       <ul className="carousel-indicators">
@@ -141,27 +142,27 @@ const Home = () => {
                     <div id="menu-brand">
                       <ul>
                         <li className="brand-item">
-                          <a href="/category-brand">
-                            <img src="../../../public/images/image 5.png" alt />
+                          <a href="/category-brand-hp">
+                            <img style={{height:"45px"}} src="../../../public/images/image 5.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="/category-brand">
-                            <img src="../../../public/images/image 6.png" alt />
+                          <a href="/category-brand-dell">
+                            <img style={{height:"27px"}} src="../../../public/images/image 6.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="/category-brand">
-                            <img src="../../../public/images/image 7.png" alt />
+                          <a href="/category-brand-asus">
+                            <img style={{height:"27px"}} src="../../../public/images/image 7.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="/category-brand">
+                          <a href="/category-brand-lenovo">
                             <img src="../../../public/images/image 8.png" alt />
                           </a>
                         </li>
                         <li className="brand-item">
-                          <a href="/category-brand">
+                          <a href="/category-brand-acer">
                             <img src="../../../public/images/image 9.png" alt />
                           </a>
                         </li>

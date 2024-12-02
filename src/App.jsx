@@ -24,6 +24,12 @@ import AddProduct from "./pages/Admin/AddProduct";
 import EditProduct from "./pages/Admin/EditProduct";
 import Order from "./pages/Admin/Order";
 import OrderDetail from "./pages/Admin/OrderDetail";
+import ListLaptopOffice from "./pages/User/ListLaptopOffice";
+import ListLaptopGraphic from "./pages/User/ListLaptopGraphic";
+import CategoryBrand1 from "./pages/User/CategoryBrand1";
+import CategoryBrand2 from "./pages/User/CategoryBrand2";
+import CategoryBrand3 from "./pages/User/CategoryBrand3";
+import CategoryBrand4 from "./pages/User/CategoryBrand4";
 function App() {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("currentUser")) || null
@@ -38,7 +44,14 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/product-detail" element={<DetailProduct />} />
               <Route path="/list-product" element={<ListLaptop />} />
-              <Route path="/category-brand" element={<CategoryBrand />} />
+              <Route path="/list-product-office" element={<ListLaptopOffice />} />
+              <Route path="/list-product-graphic" element={<ListLaptopGraphic />} />
+              <Route path="/category-brand-lenovo" element={<CategoryBrand />} />
+              <Route path="/category-brand-dell" element={<CategoryBrand3 />} />
+              <Route path="/category-brand-hp" element={<CategoryBrand4 />} />
+              <Route path="/category-brand-asus" element={<CategoryBrand1 />} />
+              <Route path="/category-brand-acer" element={<CategoryBrand2 />} />
+
               <Route path="/cart" element={<Cart />} />
               <Route path="/order-status" element={<OrderSuccess />} />
               <Route path="/order-cancel" element={<OrderCancel />} />
@@ -75,6 +88,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/product-detail" element={<DetailProduct />} />
               <Route path="/list-product" element={<ListLaptop />} />
+              <Route path="/list-product-office" element={<ListLaptopOffice />} />
+              <Route path="/list-product-graphic" element={<ListLaptopGraphic />} />
               <Route path="/category-brand" element={<CategoryBrand />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/order-status" element={<OrderSuccess />} />
