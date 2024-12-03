@@ -30,6 +30,7 @@ import CategoryBrand1 from "./pages/User/CategoryBrand1";
 import CategoryBrand2 from "./pages/User/CategoryBrand2";
 import CategoryBrand3 from "./pages/User/CategoryBrand3";
 import CategoryBrand4 from "./pages/User/CategoryBrand4";
+import Menu from "./shared/Menu";
 function App() {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("currentUser")) || null
