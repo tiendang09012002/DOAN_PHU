@@ -1,5 +1,7 @@
+import { count } from "ckeditor5";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
@@ -13,8 +15,9 @@ const Login = ({ onLogin }) => {
 
     if (user) {
       console.log(1);
-      navigate("/");
+      <Navigate to="/" />;
       localStorage.setItem("currentUser", JSON.stringify(user));
+
       onLogin(user);
     } else {
       alert("Invalid username or password.");
@@ -46,6 +49,7 @@ const Login = ({ onLogin }) => {
               <h2>Đăng nhập</h2>
               <div className="input-group">
                 <input
+                style={{fontSize:"20px"}}
                   type="text"
                   placeholder="Nhập số điện thoại"
                   value={username}
@@ -54,6 +58,7 @@ const Login = ({ onLogin }) => {
               </div>
               <div className="input-group" id="input-password">
                 <input
+                style={{fontSize:"20px"}}
                   type="password"
                   placeholder="Nhập mật khẩu"
                   id="password"
@@ -63,7 +68,7 @@ const Login = ({ onLogin }) => {
                 <i className="fas fa-eye toggle-password" />
               </div>
               <div className="options">
-                <a
+                <a style={{fontSize:"15px"}}
                   href="#"
                   id="link-forgot-password"
                   data-toggle="modal"
@@ -72,7 +77,7 @@ const Login = ({ onLogin }) => {
                   Quên mật khẩu
                 </a>
                 <span>|</span>
-                <a
+                <a style={{fontSize:"15px"}}
                   href="#"
                   id="link-register"
                   data-toggle="modal"
@@ -81,9 +86,9 @@ const Login = ({ onLogin }) => {
                   Không có tài khoản
                 </a>
               </div>
-              <div className="social-login">
-                hoặc
-                <a href="#">
+              <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"10px"}} className="social-login">
+                <p style={{display:"inline-block", color:"#FFF",fontSize:"15px", marginTop:"10px"}}>hoặc</p>
+                <a  href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={26}
@@ -128,7 +133,7 @@ const Login = ({ onLogin }) => {
                   </svg>
                 </a>
               </div>
-              <button className="login-btn" onClick={handleLogin} data-dismiss="modal">Đăng nhập</button>
+              <button style={{fontSize:"15px"}} className="login-btn" onClick={handleLogin} data-dismiss="modal">Đăng nhập</button>
             </div>
           </div>
         </div>

@@ -50,7 +50,7 @@ const CategoryBrand = () => {
                 Bộ lọc
               </button>
               <button className="option">
-                Hãng{" "}
+                Hãng
                 <svg
                   width={15}
                   height={8}
@@ -62,7 +62,7 @@ const CategoryBrand = () => {
                 </svg>
               </button>
               <button className="option">
-                Giá{" "}
+                Giá
                 <svg
                   width={15}
                   height={8}
@@ -74,7 +74,7 @@ const CategoryBrand = () => {
                 </svg>
               </button>
               <button className="option">
-                CPU{" "}
+                CPU
                 <svg
                   width={15}
                   height={8}
@@ -86,7 +86,7 @@ const CategoryBrand = () => {
                 </svg>
               </button>
               <button className="option">
-                Ram{" "}
+                Ram
                 <svg
                   width={15}
                   height={8}
@@ -98,7 +98,7 @@ const CategoryBrand = () => {
                 </svg>
               </button>
               <button className="option">
-                VGA{" "}
+                VGA
                 <svg
                   width={15}
                   height={8}

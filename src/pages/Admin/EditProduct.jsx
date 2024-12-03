@@ -150,7 +150,7 @@ const EditProduct = () => {
               </div>
             </div>
             <div className="main col-lg-8 col-md-8 col-sm-12">
-              <h4>Thêm mới sản phẩm</h4>
+              <h4>Chỉnh sửa sản phẩm</h4>
               <div className="config col-lg-12 col-md-12 col-sm-12">
                 <table class="table table-configs">
                   <tbody>
@@ -376,77 +376,77 @@ const EditProduct = () => {
                       <td>
                       <div class="info-container">
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="cpu">CPU</label>
                 <input type="text" id="cpu" name="cpu"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="wifi">Wifi + Bluetooth</label>
                 <input type="text" id="wifi" name="wifi"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="ram">Ram</label>
                 <input type="text" id="ram" name="ram"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="webcam">Webcam</label>
                 <input type="text" id="webcam" name="webcam"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="disk">Ổ cứng</label>
                 <input type="text" id="disk" name="disk"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="os">Hệ điều hành</label>
                 <input type="text" id="os" name="os"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="gpu">Card đồ họa</label>
                 <input type="text" id="gpu" name="gpu"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="battery">Pin</label>
                 <input type="text" id="battery" name="battery"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="screen">Màn hình</label>
                 <input type="text" id="screen" name="screen"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="weight">Trọng lượng</label>
                 <input type="text" id="weight" name="weight"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="connectivity">Cổng kết nối</label>
                 <input type="text" id="connectivity" name="connectivity"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="color">Màu sắc</label>
                 <input type="text" id="color" name="color"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="keyboard">Bàn phím</label>
                 <input type="text" id="keyboard" name="keyboard"/>
             </div>
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="size">Kích thước</label>
                 <input type="text" id="size" name="size"/>
             </div>
         </div>
         <div class="info-row">
-            <div class="info-detail">
+            <div class="info-detail-add">
                 <label for="audio">Audio</label>
                 <input type="text" id="audio" name="audio"/>
             </div>

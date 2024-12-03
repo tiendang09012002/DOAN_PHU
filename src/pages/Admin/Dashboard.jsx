@@ -140,7 +140,7 @@ const Dashboard = () => {
               <h4>Danh sách quản trị viên</h4>
               <div className="main-item">
                 <div className="form-add col-lg-4 col-md-8 col-sm-12">
-                  <h5>Thêm mới tài khoản</h5>
+                  <h5 >Thêm mới tài khoản</h5>
                   <input type="text" placeholder="Nhập tài khoản" />
                   <input type="text" placeholder="Nhập mật khẩu" />
                   <button>Thêm mới</button>

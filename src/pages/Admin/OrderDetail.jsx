@@ -384,11 +384,15 @@ const OrderDetail = () => {
                     background: "#FFF",
                     width: "395px",
                     padding: "2px 12px",
+                    height:"50px",
+                    fontSize:"24px",
+                    color: "#E82F35",
+            
                   }}
                 >
-                  <p style={{ color: "#E82F35", fontSize: "24px" }}>
+                  
                     Hủy đơn hàng
-                  </p>
+                  
                 </button>
               </div>
             </div>

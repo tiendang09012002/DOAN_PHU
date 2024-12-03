@@ -375,7 +375,7 @@ const AddProduct = () => {
                       <td>
                       <div class="info-container">
         <div class="info-row">
-            <div class="info-detail-add-add">
+            <div class="info-detail-add">
                 <label for="cpu">CPU</label>
                 <input type="text" id="cpu" name="cpu"/>
             </div>

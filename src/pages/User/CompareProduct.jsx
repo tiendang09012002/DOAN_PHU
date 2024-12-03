@@ -43,7 +43,7 @@ const Compare = () => {
                       />
                     </a>
                     <div className="info-laptop">
-                      <p className="name-laptop">
+                      <p style={{fontSize:"20px"}} className="name-laptop">
                         Laptop Lenovo Gaming LOQ 15IAX9
                       </p>
                       <div className="price-item">
@@ -67,7 +67,7 @@ const Compare = () => {
                       />
                     </a>
                     <div className="info-laptop">
-                      <p className="name-laptop">
+                      <p style={{fontSize:"20px"}} className="name-laptop">
                         Laptop Lenovo Gaming LOQ 15IAX9
                       </p>
                       <div className="price-item">

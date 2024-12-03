@@ -51,7 +51,6 @@ function App() {
               <Route path="/category-brand-hp" element={<CategoryBrand4 />} />
               <Route path="/category-brand-asus" element={<CategoryBrand1 />} />
               <Route path="/category-brand-acer" element={<CategoryBrand2 />} />
-
               <Route path="/cart" element={<Cart />} />
               <Route path="/order-status" element={<OrderSuccess />} />
               <Route path="/order-cancel" element={<OrderCancel />} />
@@ -90,7 +89,11 @@ function App() {
               <Route path="/list-product" element={<ListLaptop />} />
               <Route path="/list-product-office" element={<ListLaptopOffice />} />
               <Route path="/list-product-graphic" element={<ListLaptopGraphic />} />
-              <Route path="/category-brand" element={<CategoryBrand />} />
+              <Route path="/category-brand-lenovo" element={<CategoryBrand />} />
+              <Route path="/category-brand-dell" element={<CategoryBrand3 />} />
+              <Route path="/category-brand-hp" element={<CategoryBrand4 />} />
+              <Route path="/category-brand-asus" element={<CategoryBrand1 />} />
+              <Route path="/category-brand-acer" element={<CategoryBrand2 />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/order-status" element={<OrderSuccess />} />
               <Route path="/order-cancel" element={<OrderCancel />} />

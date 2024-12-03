@@ -27,7 +27,7 @@ const ListLaptopGraphic = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <h4>Trang chủ \ Laptop văn phòng</h4>
+            <h4>Trang chủ \ Laptop đồ họa</h4>
           </div>
           <div className="banner-laptop-option">
             <img src="./images/image (31).png" alt />
