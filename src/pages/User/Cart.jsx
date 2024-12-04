@@ -38,7 +38,7 @@ const Cart = () => {
     alert("Sản phẩm đã được xóa khỏi giỏ hàng.");
   };
   const handlePayment = ()=>{
-    navigate("/order-status");
+    navigate("/buy-now");
   }
   return (
     <>
